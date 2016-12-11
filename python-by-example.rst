@@ -260,7 +260,7 @@ Zipping and unzipping lists and iterables
     >>> a = [1, 2, 3]
     >>> b = ['a', 'b', 'c']
     >>> z = zip(a, b)
-    >>> z
+    >>> list(z)
     [(1, 'a'), (2, 'b'), (3, 'c')]
     >>> zip(*z)
     [(1, 2, 3), ('a', 'b', 'c')]
