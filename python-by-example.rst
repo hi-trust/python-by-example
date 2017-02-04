@@ -2,7 +2,7 @@
 #############################################################
 
 :date:      2014-03-05 19:57
-:modified:  2014-05-19 10:28
+:modified:  2017-02-04 10:28
 :tags:      python
 :category:  Python
 :slug:      thirty-python-language-features-and-tricks-you-may-not-know
