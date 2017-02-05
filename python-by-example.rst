@@ -17,9 +17,6 @@
 Introduction
 ------------
 
-by hitrust:
-only compatible for python 3.x
-
 Since I started learning Python, I decided to maintain an often
 visited list of "tricks". Any time I saw a piece of code (in an example, on
 Stack Overflow, in open source software, etc.) that made me think 
@@ -42,6 +39,9 @@ commonly known language features and tricks appearing first.
 
 A `table of contents`_ is given at the end.
 
+*Update - February 4th, 2017 by hitrust:*
+    only compatible for python 3.x
+    
 *Update - April 9th, 2014*
     As you can see the article has been growing with currently 38 items in it,
     mostly thanks to comments from readers. As such the number 30 in the title
