@@ -14,9 +14,11 @@
    :language: python 
 
 .. section-numbering::
-
 Introduction
 ------------
+
+by hitrust:
+only compatible for python 3.x
 
 Since I started learning Python, I decided to maintain an often
 visited list of "tricks". Any time I saw a piece of code (in an example, on
