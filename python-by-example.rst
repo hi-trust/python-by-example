@@ -264,7 +264,7 @@ Zipping and unzipping lists and iterables
     >>> z = zip(a, b)
     >>> list(z)
     [(1, 'a'), (2, 'b'), (3, 'c')]
-    >>> zip(*z)
+    >>> list(zip(*zip(a, b)))
     [(1, 2, 3), ('a', 'b', 'c')]
 
 
