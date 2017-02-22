@@ -536,7 +536,7 @@ Double-ended queue with maximum length (``collections.deque``)
 
     >>> import collections
     >>> last_three = collections.deque(maxlen=3)
-    >>> for i in xrange(10):
+    >>> for i in range(10):
     ...     last_three.append(i)
     ...     print(', '.join(str(x) for x in last_three))
     ... 
@@ -666,7 +666,8 @@ Largest and smallest elements (``heapq.nlargest`` and ``heapq.nsmallest``)
   
 .. code-block:: pycon
 
-    >>> a = [random.randint(0, 100) for __ in xrange(100)]
+    >>> import random, heapq
+    >>> a = [random.randint(0, 100) for __ in range(100)]
     >>> heapq.nsmallest(5, a)
     [3, 3, 5, 6, 8]
     >>> heapq.nlargest(5, a)
@@ -678,6 +679,7 @@ Cartesian products (``itertools.product``)
 
 .. code-block:: pycon
 
+    >>> import itertools
     >>> for p in itertools.product([1, 2, 3], [4, 5]):
     (1, 4)
     (1, 5)
@@ -686,7 +688,7 @@ Cartesian products (``itertools.product``)
     (3, 4)
     (3, 5)
     >>> for p in itertools.product([0, 1], repeat=4):
-    ...     print ''.join(str(x) for x in p)
+    ...     print(''.join(str(x) for x in p))
     ... 
     0000
     0001
@@ -711,8 +713,9 @@ Combinations and combinations with replacement (``itertools.combinations`` and `
 
 .. code-block:: pycon
 
+    >>> import itertools
     >>> for c in itertools.combinations([1, 2, 3, 4, 5], 3):
-    ...     print ''.join(str(x) for x in c)
+    ...     print(''.join(str(x) for x in c))
     ... 
     123
     124
@@ -740,6 +743,7 @@ Permutations (``itertools.permutations``)
 
 .. code-block:: pycon
 
+   >>> import itertools
    >>> for p in itertools.permutations([1, 2, 3, 4]):
    ...     print ''.join(str(x) for x in p)
    ... 
@@ -774,9 +778,10 @@ Chaining iterables (``itertools.chain``)
 
 .. code-block:: pycon
 
+   >>> import itertools
    >>> a = [1, 2, 3, 4]
    >>> for p in itertools.chain(itertools.combinations(a, 2), itertools.combinations(a, 3)):
-   ...     print p
+   ...     print(p)
    ... 
    (1, 2)
    (1, 3)
@@ -789,7 +794,7 @@ Chaining iterables (``itertools.chain``)
    (1, 3, 4)
    (2, 3, 4)
    >>> for subset in itertools.chain.from_iterable(itertools.combinations(a, n) for n in range(len(a) + 1))
-   ...     print subset
+   ...     print(subset)
    ... 
    ()
    (1,)
