@@ -245,7 +245,7 @@ Iterating over dictionary key and value pairs (``dict.iteritems``)
 
     >>> m = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
     >>> for k, v in m.iteritems():
-    ...     print '{}: {}'.format(k, v)
+    ...     print('{}: {}'.format(k, v))
     ... 
     a: 1
     c: 3
@@ -364,7 +364,7 @@ Generator expressions
 
 .. code-block:: pycon
 
-    >>> g = (x ** 2 for x in xrange(10))
+    >>> g = (x ** 2 for x in range(10))
     >>> next(g)
     0
     >>> next(g)
@@ -373,9 +373,9 @@ Generator expressions
     4
     >>> next(g)
     9
-    >>> sum(x ** 3 for x in xrange(10))
+    >>> sum(x ** 3 for x in range(10))
     2025
-    >>> sum(x ** 3 for x in xrange(10) if x % 3 == 1)
+    >>> sum(x ** 3 for x in range(10) if x % 3 == 1)
     408
 
 
@@ -410,6 +410,7 @@ Named tuples (``collections.namedtuple``)
 
 .. code-block:: pycon
 
+    >>> import collections
     >>> Point = collections.namedtuple('Point', ['x', 'y'])
     >>> p = Point(x=1.0, y=2.0)
     >>> p
@@ -425,6 +426,7 @@ Inheriting from named tuples:
 
 .. code-block:: pycon
 
+  >>> import collections
   >>> class Point(collections.namedtuple('PointBase', ['x', 'y'])):
   ...     __slots__ = ()
   ...     def __add__(self, other):
@@ -466,6 +468,7 @@ Multisets and multiset operations (``collections.Counter``)
 
 .. code-block:: pycon
 
+    >>> import collections
     >>> A = collections.Counter([1, 2, 2])
     >>> B = collections.Counter([2, 2, 3])
     >>> A
@@ -489,6 +492,7 @@ Most common elements in an iterable (``collections.Counter``)
 
 .. code-block:: pycon
 
+    >>> import collections
     >>> A = collections.Counter([1, 1, 2, 2, 3, 3, 3, 3, 4, 5, 6, 7])
     >>> A
     Counter({3: 4, 1: 2, 2: 2, 4: 1, 5: 1, 6: 1, 7: 1})
@@ -503,6 +507,7 @@ Double-ended queue (``collections.deque``)
 
 .. code-block:: pycon
 
+  >>> import collections
   >>> Q = collections.deque()
   >>> Q.append(1)
   >>> Q.appendleft(2)
@@ -529,10 +534,11 @@ Double-ended queue with maximum length (``collections.deque``)
 
 .. code-block:: pycon
 
+    >>> import collections
     >>> last_three = collections.deque(maxlen=3)
     >>> for i in xrange(10):
     ...     last_three.append(i)
-    ...     print ', '.join(str(x) for x in last_three)
+    ...     print(', '.join(str(x) for x in last_three))
     ... 
     0
     0, 1
@@ -551,14 +557,15 @@ Ordered dictionaries (``collections.OrderedDict``)
 
 .. code-block:: pycon
 
+    >>> import collections
     >>> m = dict((str(x), x) for x in range(10))
-    >>> print ', '.join(m.keys())
+    >>> print(', '.join(m.keys()))
     1, 0, 3, 2, 5, 4, 7, 6, 9, 8
     >>> m = collections.OrderedDict((str(x), x) for x in range(10))
-    >>> print ', '.join(m.keys())
+    >>> print(', '.join(m.keys()))
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9
     >>> m = collections.OrderedDict((str(x), x) for x in range(10, 0, -1))
-    >>> print ', '.join(m.keys())
+    >>> print(', '.join(m.keys()))
     10, 9, 8, 7, 6, 5, 4, 3, 2, 1
 
 
@@ -567,6 +574,7 @@ Default dictionaries (``collections.defaultdict``)
 
 .. code-block:: pycon
 
+    >>> import collections
     >>> m = dict()
     >>> m['a']
     Traceback (most recent call last):
@@ -597,6 +605,7 @@ Using default dictionaries to represent simple trees
 
 .. code-block:: pycon
 
+   >>> import collections
    >>> import json
    >>> tree = lambda: collections.defaultdict(tree)
    >>> root = tree()
@@ -608,7 +617,7 @@ Using default dictionaries to represent simple trees
    >>> root['menu']['menuitems']['open']['onclick'] = 'open();'
    >>> root['menu']['menuitems']['close']['value'] = 'Close'
    >>> root['menu']['menuitems']['close']['onclick'] = 'close();'
-   >>> print json.dumps(root, sort_keys=True, indent=4, separators=(',', ': '))
+   >>> print(json.dumps(root, sort_keys=True, indent=4, separators=(',', ': ')))
    {
        "menu": {
            "id": "file",
@@ -812,7 +821,7 @@ Grouping rows by a given key (``itertools.groupby``)
     ... 
     >>> data = data[1:]  
     >>> def print_data(rows):
-    ...     print '\n'.join('\t'.join('{: <16}'.format(s) for s in row) for row in rows)
+    ...     print('\n'.join('\t'.join('{: <16}'.format(s) for s in row) for row in rows))
     ... 
 
     >>> print_data(data)
@@ -843,8 +852,8 @@ Grouping rows by a given key (``itertools.groupby``)
     
     >>> data.sort(key=itemgetter(-1))
     >>> for value, group in itertools.groupby(data, lambda r: r[-1]):
-    ...     print '-----------'
-    ...     print 'Group: ' + value
+    ...     print('-----------')
+    ...     print('Group: ' + value)
     ...     print_data(group)
     ... 
     -----------
