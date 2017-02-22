@@ -728,7 +728,7 @@ Combinations and combinations with replacement (``itertools.combinations`` and `
     245
     345
     >>> for c in itertools.combinations_with_replacement([1, 2, 3], 2):
-    ...     print ''.join(str(x) for x in c)
+    ...     print(''.join(str(x) for x in c))
     ... 
     11
     12
@@ -745,7 +745,7 @@ Permutations (``itertools.permutations``)
 
    >>> import itertools
    >>> for p in itertools.permutations([1, 2, 3, 4]):
-   ...     print ''.join(str(x) for x in p)
+   ...     print(''.join(str(x) for x in p))
    ... 
    1234
    1243
