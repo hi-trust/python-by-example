@@ -1,14 +1,13 @@
-30 Python Language Features and Tricks You May Not Know About
+Python3  Features Need to Know
 #############################################################
 
 :date:      2014-03-05 19:57
-:modified:  2017-02-04 10:28
+:modified:  2017-02-24 10:28
 :tags:      python
 :category:  Python
-:slug:      thirty-python-language-features-and-tricks-you-may-not-know
-:author:    Sahand Saba
-:summary:   A list of Python tips and tricks. See how many of them you already
-            know.
+:slug:      python3-features-need-to-know
+:author:    hitrust, Sahand Saba
+:summary:   A list of Python tips and tricks.
 
 .. role:: python(code)
    :language: python 
@@ -39,7 +38,7 @@ commonly known language features and tricks appearing first.
 
 A `table of contents`_ is given at the end.
 
-*Update - February 4th, 2017 by hitrust:*
+*Update - February 24th, 2017 by hitrust:*
     only compatible for python 3.x
     
 *Update - April 9th, 2014*
