@@ -935,6 +935,22 @@ Use C-Style Braces Instead of Indentation to Denote Scopes
 .. code-block:: pycon
    
    >>> from __future__ import braces
+   
+Abstract Base Class
+=========================================================
+
+.. code-block:: pycon
+   >>> import abc
+    
+The Binary Search Alogirithm
+=========================================================
+
+.. code-block:: pycon
+   >>> import bisect
+  
+ChainMap make a good stackable namespace
+========================================================
+
 
 
 _`Table of contents`
