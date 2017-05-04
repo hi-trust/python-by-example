@@ -989,6 +989,25 @@ Filter usage in python3
    >>> list(filter(lambda x: x.startswith("I "), ["I think", "I'm good"]))
    ['I think']
 
+Equivalent of map using list comprehension
+====================================================
+
+.. code-block:: pycon
+
+   >>> (x + "bzz!" for x in ["I think", "I'm good"])
+   <generator object <genexpr> at 0x7f9a0d697dc0>
+   >>> [x + "bzz!" for x in ["I think", "I'm good"]]
+   ['I thinkbzz!', "I'm goodbzz!"]
+
+Equivalent of filter using list comprehension
+===================================================
+.. code-block:: pycon
+
+   >>> (x for x in ["I think", "I'm good"] if x.startswith("I "))
+   <generator object <genexpr> at 0x7f9a0d697dc0>
+   >>> [x for x in ["I think", "I'm good"] if x.startswith("I ")]
+   ['I think']
+
 
 _`Table of contents`
 --------------------
