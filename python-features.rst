@@ -969,6 +969,26 @@ ChainMap make a good stackable namespace
 ========================================================
 
 
+Map usage in python3
+========================================================
+
+.. code-block:: pycon
+   
+   >>> map(lambda x: x + "bzz!", ["I think", "I'm good"])
+   <map object at 0x7fe7101abdd0>
+   >>> list(map(lambda x: x + "bzz!", ["I think", "I'm good"]))
+   ['I thinkbzz!', "I'm goodbzz!"]
+   
+Filter usage in python3
+======================================================
+
+.. code-block:: pycon
+
+   >>> filter(lambda x: x.startswith("I "), ["I think", "I'm good"])
+   <filter object at 0x7f9a0d636dd0>
+   >>> list(filter(lambda x: x.startswith("I "), ["I think", "I'm good"]))
+   ['I think']
+
 
 _`Table of contents`
 --------------------
