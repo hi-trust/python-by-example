@@ -377,6 +377,14 @@ Generator expressions
     >>> sum(x ** 3 for x in range(10) if x % 3 == 1)
     408
 
+List comprehension
+=========================
+.. code-block:: pycon
+
+   >>> x = [i for i in (1, 2, 3)]
+   >>> x
+   [1, 2, 3]
+
 
 Dictionary comprehensions
 =========================
@@ -390,6 +398,15 @@ Dictionary comprehensions
     >>> m = {x: 'A' + str(x) for x in range(10)}
     >>> m
     {0: 'A0', 1: 'A1', 2: 'A2', 3: 'A3', 4: 'A4', 5: 'A5', 6: 'A6', 7: 'A7', 8: 'A8', 9: 'A9'}
+    
+
+Set comprehension
+=============================
+
+.. code-block:: pycon
+
+   >>> {x.upper() for x in ['hello', 'world']}
+   set(['WORLD', 'HELLO'])
 
 
 Inverting a dictionary using a dictionary comprehension
