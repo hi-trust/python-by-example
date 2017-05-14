@@ -1007,6 +1007,16 @@ Equivalent of filter using list comprehension
    <generator object <genexpr> at 0x7f9a0d697dc0>
    >>> [x for x in ["I think", "I'm good"] if x.startswith("I ")]
    ['I think']
+   
+contextlib standard librar⁴ provides contextmanager
+===================================================
+.. code-block:: pycon
+
+   >>>import contextlib
+   @contextlib.contextmanager
+   def MyContext():
+      yield
+      
 
 
 _`Table of contents`
