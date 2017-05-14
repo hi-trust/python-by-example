@@ -1013,9 +1013,9 @@ contextlib standard librar⁴ provides contextmanager
 .. code-block:: pycon
 
    >>> import contextlib
-   @contextlib.contextmanager
-   def MyContext():
-      yield
+   >>> @contextlib.contextmanager
+      def MyContext():
+         yield
       
 
 
