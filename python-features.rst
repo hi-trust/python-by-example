@@ -2,7 +2,7 @@ Python3  Features Need to Know
 #############################################################
 
 :date:      2014-03-05 19:57
-:modified:  2017-02-24 10:28
+:modified:  2017-05-11 12:00
 :tags:      python
 :category:  Python
 :slug:      python3-features-need-to-know
@@ -237,13 +237,13 @@ Iterating over list index and value pairs (``enumerate``)
     2: !
 
 
-Iterating over dictionary key and value pairs (``dict.iteritems``)
+Iterating over dictionary key and value pairs (``dict.items``)
 ==================================================================
 
 .. code-block:: pycon
 
     >>> m = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
-    >>> for k, v in m.iteritems():
+    >>> for k, v in m.items():
     ...     print('{}: {}'.format(k, v))
     ... 
     a: 1
@@ -251,7 +251,7 @@ Iterating over dictionary key and value pairs (``dict.iteritems``)
     b: 2
     d: 4
 
-Note: use ``dict.items`` in Python 3.
+Note: use ``dict.iteritems`` in Python 2.
 
 Zipping and unzipping lists and iterables
 =========================================
